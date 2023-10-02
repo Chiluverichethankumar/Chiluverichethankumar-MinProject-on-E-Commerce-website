@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>registration-form</title>
+
+
+</head>
+<body background="https://images-cdn.welcomesoftware.com/Zz0zZTliMjQ4MzhlNGExMWViYmJiMjFiZTI2ZWNmN2MzZA==">
+
+<center>
+ 
+  <img align="left" src=" https://www.gitam.edu/themes/custom/gitam/logo.png">
+  <center>
+<img src="https://www.gitam.edu/sites/default/files/2022-08/Gandhi-Statue--with-flower-_1.jpg" width="900" hiight="800">
+</center>
+<h1><u><p style="color:brown;">registration-form</p></h1></u>
+
+<form id="registration-form" action="#" method="post">
+ <label for="name">FirstName:</label>
+  <input type="text" id="name" name="name"><br><br>
+
+  <label for="name">LastName:</label>
+  <input type="text" id="name" name="name"><br><br>
+  
+ <label for="age">Age:</label>
+  <input type="number" id="age" name="age"><br><br>
+
+
+   <label for="name">Phone Num:</label>
+ <input id="phone" name="phone" class="no-arrow" value="" type="number"  maxlength="10" required   onkeypress="phoneno()" ><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password"><br><br>
+
+  <label for="confirm-password">Confirm Password:</label>
+  <input type="password" id="confirm-password" name="confirm-password"><br><br>
+
+  <button type="submit"><a href="#">Submit</button>
+    <button type="submit"><a href="#">Log in</button>
+
+
+</form>
+</body>
+<script type="text/javascript">
+// get form and form elements
+const form = document.getElementById("registration-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirm-password");
+
+// add event listener for form submission
+form.addEventListener("submit", (event) => {
+  // prevent form submission
+  event.preventDefault();
+
+  // check if name is empty
+  if (nameInput.value.trim() === "") {
+    alert("Please enter your name.");
+    nameInput.focus();
+    return;
+  }
+
+  // check if email is empty or invalid format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailInput.value.trim() === "" || !emailRegex.test(emailInput.value.trim())) {
+    alert("Please enter a valid email address.");
+    emailInput.focus();
+    return;
+  }
+
+  // check if password is empty or less than 6 characters
+  if (passwordInput.value.trim() === "" || passwordInput.value.length < 6) {
+    alert("Please enter a password with at least 6 characters.");
+    passwordInput.focus();
+    return;
+  }
+
+  // check if confirm password matches password
+  if (confirmPasswordInput.value.trim() === "" || confirmPasswordInput.value !== passwordInput.value) {
+    alert("Please confirm your password.");
+    confirmPasswordInput.focus();
+    return;
+  }
+
+  // submit form
+  form.submit();
+});
+
+</script>
+</html>
