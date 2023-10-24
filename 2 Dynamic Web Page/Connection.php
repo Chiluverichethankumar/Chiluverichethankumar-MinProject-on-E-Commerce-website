@@ -1,8 +1,7 @@
 <?php
 if(isset($_POST['firstName']) ) {
 
-	$con = new mysqli('localhost','root','','miniproject
-    ');
+	$con = new mysqli('localhost','root','','miniproject');
 
 
     $firstName = $_POST['firstName'];

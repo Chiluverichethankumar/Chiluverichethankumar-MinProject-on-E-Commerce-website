@@ -21,19 +21,19 @@ if($con->connect_error){
             header("Location:Main.html");
         }
         else{
-            echo "<h2>Invalid Email or Password</h2>";
+            header("Location:Invalid.html");
         }
 
     }
     else{
-        echo"<h2>Invalid Email or Password</h2>";
+        header("Location:Invalid.html");
     }
 }
 }
 
 else
 {
-	echo "Invalid Email or Password";
+	header("Location:Invalid.html");
 	
 }
 

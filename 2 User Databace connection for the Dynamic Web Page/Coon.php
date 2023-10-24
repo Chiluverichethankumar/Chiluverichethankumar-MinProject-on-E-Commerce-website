@@ -24,7 +24,8 @@ if($rs)
 }
 else
 {
-	echo "Are you a genuine visitor?";
+	header("Location:Invalid.html");
+
 	
 }
 
