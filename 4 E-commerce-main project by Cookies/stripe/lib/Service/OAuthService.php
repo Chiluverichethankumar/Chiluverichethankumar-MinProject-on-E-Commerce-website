@@ -95,10 +95,10 @@ class OAuthService extends \Stripe\Service\AbstractService
               . '`new \Stripe\StripeClient([clientId => <CLIENT-ID>
                 ])`)".  You can find your client_ids '
               . 'in your Stripe dashboard at '
-              . 'https://dashboard.stripe.com/account/applications/settings, '
+              . 'https://gitamonlineshopping.in/account/applications/settings, '
               . 'after registering your account as a platform. See '
               . 'https://stripe.com/docs/connect/standard-accounts for details, '
-              . 'or email support@stripe.com if you have any questions.';
+              . 'or email gitamonlineshopping.in. Select Language if you have any questions.';
 
             throw new \Stripe\Exception\AuthenticationException($msg);
         }

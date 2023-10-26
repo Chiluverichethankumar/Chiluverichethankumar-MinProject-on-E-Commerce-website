@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2023 at 09:48 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Generation Time: Oct 26, 2023 at 02:42 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,12 +42,12 @@ CREATE TABLE `carts` (
 --
 
 INSERT INTO `carts` (`sid`, `pid`, `uid`, `product`, `price`, `quantity`, `status`) VALUES
-(228, 43, 2, 'Milkshake', 100, 1, 'active'),
-(229, 43, 2, 'Milkshake', 100, 1, 'active'),
-(230, 43, 26, 'Milkshake', 100, 1, 'active'),
-(231, 43, 26, 'Milkshake', 100, 1, 'active'),
 (232, 44, 1, 'Cake', 1000, 1, 'active'),
-(233, 44, 1, 'Cake', 1000, 1, 'active');
+(233, 44, 1, 'Cake', 1000, 1, 'active'),
+(236, 44, 27, 'Cake', 1000, 1, 'active'),
+(241, 43, 2, 'dairy milk', 100, 3, 'active'),
+(242, 15, 2, 'Obeservation', 40, 1, 'active'),
+(249, 44, 1, 'Cake', 1000, 3, 'active');
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,8 @@ INSERT INTO `customer` (`customer_id`, `customer_fname`, `customer_email`, `cust
 (2, 'Revanth', 'revanth@gmail.com', 'Revanth@123', '7396450111', 'Hyd', 'normal'),
 (3, 'Venkatesh', 'venkatesh@gmail.com', 'Venkatesh@123', '7993352502', 'hyd', 'normal'),
 (4, 'Karthik', 'karthik@gmail.com', 'Karthik@123', '7671031512', 'Hyd', 'normal'),
-(26, 'Sai teja', 'sai@gamil.com', 'Sai@123', '7733234970', 'sangareddy', 'normal');
+(26, 'Sai teja', 'sai@gamil.com', 'Sai@123', '7733234970', 'sangareddy', 'normal'),
+(27, 'bharath', 'jkallam@gitam.in', 'Gitam@shopping', '8309866042', 'Hyderabad ', 'normal');
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,7 @@ INSERT INTO `products` (`product_id`, `product_catag`, `product_title`, `product
 (14, 'Books', 'Record', 60, 'Gitma Record book for the lab', '24,Oct,2023', '3.jpg', 25, 'Revanth'),
 (15, 'Books', 'Obeservation', 40, 'Gitam Obeservation for the Lab', '24,Oct,2023', '2.jpg', 120, 'Revanth'),
 (16, 'Books', 'Assignment', 30, 'Gitam Assignment book for Assignmentes', '24,Oct,2023', '1.jpg', 25, 'Revanth'),
-(43, 'food', 'Milkshake', 100, '  This Chocolate Milkshake Recipe is an easy and quick way to prepare a delicious Chocolate Shake with cocoa powder, milk and sugar.', '22,10,2023', 'food1.jpg', 50, 'chethan'),
+(43, 'food', 'dairy milk', 100, 'Cadbury Dairy Milk Silk Chocolate Bar, Pack of 3 x 150g', '22,10,2023', 'food1.jpg', 50, 'chethan'),
 (44, 'food', 'Cake', 1000, ' This cake is hand delivered in a good quality cardboard box. Weight- 1/2 Kg', '22,10,2023', 'food3.jpg', 25, 'chethan'),
 (45, 'food', 'kinder joy', 45, 'made of two soft cream layers – one sweet milk-cream flavored and one cocoa flavored', '23,10,2023', 'food2.jpg', 24, 'chethan');
 
@@ -227,13 +228,13 @@ ALTER TABLE `soldproducts`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=234;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `customer_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `email`
@@ -245,7 +246,7 @@ ALTER TABLE `email`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `servicestatus`
