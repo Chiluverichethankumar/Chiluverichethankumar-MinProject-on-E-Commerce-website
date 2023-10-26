@@ -137,7 +137,7 @@ header("Location:profile.php?id={$_SESSION['id']}");
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-   <a class="brand" href="index.php?id=<?php echo (isset( $_SESSION['customer_name']))? $_SESSION['id']: 'unknown';?>" style="opacity:0.8"><img width="200px" src="./admin/upload/<?php echo $_SESSION['web-img']; ?>" alt="electricshop"/></a>
+   <a class="brand" href="index.php?id=<?php echo (isset( $_SESSION['customer_name']))? $_SESSION['id']: 'unknown';?>" style="opacity:0.8"><img width="200px" src="./admin/upload/<?php echo $_SESSION['web-img']; ?>" alt="Gitam Online Shopping"/></a>
    <form style='margin-right:4px' class="form-inline navbar-search" method="post" action="./search.php" id='myForm' >
 	  <div class="input-group col-md-4">
             <input class="form-control py-2 border-right-0 border " type="search" name='search' id='transcript' placeholder="search" >
