@@ -63,7 +63,8 @@ while($row = $result->fetch_assoc()) {
   $quantArray[$sn-1] = $row['quantity'];
   $encodedPidData = urlencode(serialize($pidArray));
   $encodedQuantityData = urlencode(serialize($quantArray));
-
+  
+  $totalquantity=$row["price"] * $row["quantity"];
   $total = $total+ $row["price"] * $row["quantity"];
 ?>
 <tr>
@@ -73,7 +74,7 @@ while($row = $result->fetch_assoc()) {
           <td>
           <p><?php echo $row["quantity"] ?></p>
           </td>
-          <td><?php echo $row["price"] ?></td>
+          <td><?php echo $totalquantity ?></td>
           <td>
           <form action="<?php echo $_SERVER['PHP_SELF']?>?pid=<?php echo $row['pid']?>&q=<?php echo $row['quantity']?>" method="post">
 <button name='delete' type='submit' class="btn btn-danger">Remove</button>
